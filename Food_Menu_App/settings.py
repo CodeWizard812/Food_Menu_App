@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'food.apps.FoodConfig',  # Ensure this is the correct path to your app
 ]
 
 MIDDLEWARE = [
