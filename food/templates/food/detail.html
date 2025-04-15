@@ -1,13 +1,5 @@
 {% extends 'food/base.html' %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Item Detail</title>
-</head>
-<body>
-    {% block body %}
+{% block body %}
     <div class="container">
         <div class="row">
             <div class="col-md-6 ">
@@ -17,8 +9,9 @@
                 <h1>{{ item.item_name }}</h1>
                 <h2>{{ item.item_description }}</h2>
                 <h4>Rs.{{ item.item_price }}</h4>
+                <a href="{% url 'food:index' %}" class="btn btn-secondary">Back</a>
+                <a href="{% url 'food:edit_item' item.id %}" class="btn btn-primary">Update</a>
+                <a href="{% url 'food:delete_item' item.id %}" class="btn btn-danger">Delete</a>
             </div>
     </div>
-    {% endblock %}
-</body>
-</html>
+{% endblock %}

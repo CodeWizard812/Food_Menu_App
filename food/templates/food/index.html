@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Item App</title>
+    <title>Food App</title>
 </head>
 <body>
     {% block body %}
@@ -16,7 +16,7 @@
                 <div class="col-md-4">
                     <h1>{{ item.item_name }}</h1>
                     <h2>{{ item.item_description }}</h2>
-                    <h4>Price: Rs.{{ item.item_price }}</h4>
+                    <h4>Rs.{{ item.item_price }}</h4>
                 </div>
                 <div class="col-md-2 ">
                     <a href="{% url 'food:detail' item.id %}" class="btn btn-success">View Details</a>
