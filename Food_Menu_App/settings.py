@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'food.apps.FoodConfig',  # Ensure this is the correct path to your app
+    'users.apps.UsersConfig',  # Ensure this is the correct path to your app
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = 'food:index'  # Redirect to the index page after login
