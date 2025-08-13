@@ -125,3 +125,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = 'food:index'  # Redirect to the index page after login
+
+LOGIN_URL = 'login'  # URL for the login page
